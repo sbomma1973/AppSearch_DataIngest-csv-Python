@@ -62,12 +62,7 @@ def ingest_data(engine, url,pvt_key, json_data):
         engine_name=engine,
         body=json_data
     )
-# Decide the two file paths according to your:
-# computer system
-#csvFilePath = r'Names.csv'
-#jsonFilePath = r'Names.json'
 
-# Call the make_json function
 #make_json(csvFilePath, jsonFilePath)
 # Press the green button in the gutter to run the script.
 if __name__ == '__main__':
