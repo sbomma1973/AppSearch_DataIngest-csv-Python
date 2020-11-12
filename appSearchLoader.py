@@ -1,10 +1,10 @@
 ######################
-#Appsearch CSV data loader Created by
+#App Search CSV data loader Created by
 # Satish Bomma -- Solutions Architect at Elastic
 # Please email or contact me at satish.bomma@elastic.co
 # date: Nov 12 2020
 #######################
-# Elastic Enterprise Search AppSearch csv data load using Python Client
+# Elastic Enterprise Search App Search csv data load using Python Client
 # Pre-requisites install the Elastic client
 # Setup up elasticsearch in the cloud using (Cloud.elastic.co)
 # Config.yml Steps
