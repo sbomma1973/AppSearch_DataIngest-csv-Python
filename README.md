@@ -1,4 +1,4 @@
-# AppSearch_DataIngest-csv-Python
+# App Search_DataIngest-csv-Python
 	1. Setup App Search using cloud.elastic.co (use Enterprise Search template to create an AppSearch instance and elastic cluster)
 	2. Create an App Search Engine
 	3. Download the App Search Python client https://github.com/elastic/enterprise-search-python
