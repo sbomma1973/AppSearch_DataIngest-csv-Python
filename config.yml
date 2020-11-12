@@ -2,5 +2,5 @@ csvPath : "/users/satishbomma/PycharmProjects/appSearchData/netflix_titles.csv"
 Engine : "netflix-engine"
 url: "https://url"
 cloud_url: "https://7c099a726e3b4e1db96decda426c88ae.ent-search.us-west1.gcp.cloud.es.io"
-pvt_key: "private-riro6ibbfradp616ubfzf1my"
+pvt_key: "xxxxxxxxxxxxxxxxxxxxxxxxxxxxxxx"
 batch_size: 100
