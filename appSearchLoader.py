@@ -1,16 +1,16 @@
 ######################
 #Appsearch CSV data loader Created by
-# Satish Bommma -- Solutions Architect at Elastic
-# Please email or conact me at satish.bomma@elastic.co
+# Satish Bomma -- Solutions Architect at Elastic
+# Please email or contact me at satish.bomma@elastic.co
 # date: Nov 12 2020
 #######################
 # Elastic Enterprise Search AppSearch csv data load using Python Client
-# Pre-requsites install the Elastic client
-# Setup up elasticsearch in the cloud usnig (Cloud.elastic.co)
+# Pre-requisites install the Elastic client
+# Setup up elasticsearch in the cloud using (Cloud.elastic.co)
 # Config.yml Steps
 # get the private key and url configure it in config.yml file
 # Create an engine in and configure the engine name.
-# get your csv file/files and proovide the path for the csv file..
+# get your csv file/files and provide the path for the csv file..
 
 
 import csv
