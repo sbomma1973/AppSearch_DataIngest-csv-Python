@@ -25,10 +25,12 @@ def read_from_file():
         data = yaml.load (f, Loader=yaml.FullLoader)
         return data
 
-def make_json(csvFilePath, engine, url, private_key,batch_size):
-    # create a dictionary
-    data = {}
-
+def make_json(csvFilePath, engine, url, private_key, batch_size):
+    #initialize appSearch client
+    app_search = AppSearch(
+        url,
+        http_auth = private_key,
+    )
     # Open a csv reader called DictReader
     with open(csvFilePath) as csvf:
         csvReader = csv.DictReader(csvf)
@@ -44,20 +46,18 @@ def make_json(csvFilePath, engine, url, private_key,batch_size):
                 #print (json_data)
                 batch = []
                 count = 0
-                ingest_data(engine, url, private_key, json_data)
+                ingest_data(engine, json_data, app_search)
             batch.append(row)
             count += 1
         if batch:
             json_data = json.dumps(batch)
-            ingest_data(engine, url, private_key, json_data)
+            ingest_data(engine, json_data, app_search)
+
     # Driver Code
-def ingest_data(engine, url,pvt_key, json_data):
+def ingest_data(engine, json_data, app_search):
     print ("ingest rows into appsearch")
     print (json_data)
-    app_search = AppSearch(
-        url,
-        http_auth = pvt_key,
-    )
+
     app_search.index_documents(
         engine_name=engine,
         body=json_data
@@ -76,7 +76,7 @@ if __name__ == '__main__':
     print ("csvpath:", csv_path)
 
     print ("Engine:", engine)
-    make_json(csv_path,engine, url, private_key, batch_size)
+    make_json(csv_path, engine, url, private_key, batch_size)
 
     #insert_status=ingest_data(engine, url, private_key, json_data)
 
